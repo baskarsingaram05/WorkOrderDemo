@@ -1,9 +1,12 @@
 Manifest-Version: 1.0
+
+SAP-RuntimeProfile: iflmap
 Bundle-SymbolicName: I1008_CRM_to_ACE_WorkOrder; singleton:=true
+Bundle-Name: I1008_CRM_to_ACE_WorkOrder
+Bundle-Version: 1.1.34
 Bundle-ManifestVersion: 2
-Origin-Bundle-SymbolicName: I1008_CRM_to_ACE_WorkOrder
 SAP-ArtifactTrait: 
-Origin-Bundle-Version: 1.1.31
+SAP-NodeType: IFLMAP
 Import-Package: com.sap.esb.application.services.cxf.interceptor,com.s
  ap.esb.security,com.sap.it.op.agent.api,com.sap.it.op.agent.collector
  .camel,com.sap.it.op.agent.collector.cxf,com.sap.it.op.agent.mpl,java
@@ -30,12 +33,7 @@ Import-Package: com.sap.esb.application.services.cxf.interceptor,com.s
  ,com.sap.esb.camel.endpoint.configurator.api,com.sap.esb.camel.jdbc.i
  dempotency.reorg,javax.sql,org.apache.camel.processor.idempotent.jdbc
  ,org.osgi.service.blueprint;version="[1.0.0,2.0.0)"
-Origin-Bundle-Name: I1008_CRM_to_ACE_WorkOrder
-SAP-RuntimeProfile: iflmap
-Bundle-Name: I1008_CRM_to_ACE_WorkOrder
-Bundle-Version: 1.1.31
-SAP-NodeType: IFLMAP
-Origin-ModifiedDate: 1590496626163
+
 SAP-BundleType: IntegrationFlow
 Import-Service: com.sap.esb.webservice.audit.log.AuditLogger,com.sap.e
  sb.security.KeyManagerFactory;multiple:=false,com.sap.esb.security.Tr

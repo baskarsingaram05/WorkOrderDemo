@@ -1,7 +1,6 @@
 #Store metainfo properties
-#Thu Sep 03 02:36:31 UTC 2020
-OriginModifiedDate=1590496626163
+#Thu Sep 03 02:35:35 UTC 2020
+description=Iflow replicating WorkOrder from CRM to ACEi
 OriginBundleName=I1008_CRM_to_ACE_WorkOrder
 OriginBundleSymbolicName=I1008_CRM_to_ACE_WorkOrder
-description=Iflow replicating WorkOrder from CRM to ACEi
 OriginBundleVersion=1.1.31
