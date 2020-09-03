@@ -1,0 +1,26 @@
+#
+#Thu Sep 03 02:40:10 UTC 2020
+SendSFDC_Address=/genericSFDC/send/pro
+SAP_Credentials=SAP_Credentials
+SFDC_SecurityToken=Salesforce_OAX_SecurityToken
+WorkOrderID=/queryResponse/WorkOrder/Id
+Log02_ACEWorkOrderStatus=true
+Log03_ACEWorkOrderStructure_AM=true
+Log01_WorkOrderOdataResponse=true
+SF_Endpoint=https\://olympus-europa--oax.my.salesforce.com/services/Soap/u/46.0
+CRM_WorkOrderFlow=/crmOrderContract/workorder/pro
+Current_Payload=${in.body}
+SF_CredentialName=Salesforce_OAX_UserCredentials
+SF_SecurityToken=Salesforce_OAX_SecurityToken
+SAP-Client=sap-client \= 110
+timeout=1
+Interface_Name=${camelId}
+ACE_ValidServiceOrgs=//service_org \= &apos;O 50001042&apos; or //service_org \= &apos;O 50001338&apos; or //service_org \= &apos;O 50001335&apos;
+Exception_Addrerss=/genericCPI/storeAlertInJMS
+WorkOrder_Odata_endpoint=http\://olyvoct0.xnet.oe.olympus\:8033/sap/opu/odata/sap/zca_order_interfaces_srv/
+SFDC_Credential=Salesforce_OAX_UserCredentials
+Contactid=/queryResponse/Contact/Id
+SFDC_Endpoint=https\://olympus-europa--oax.my.salesforce.com/services/Soap/u/46.0
+Error_Message=${exception.message}
+MPL_ID=SAP_MessageProcessingLogID
+Execution_Time=${date\:now\:yyyy-MM-dd HH\:mm\:ss.SSS Z}

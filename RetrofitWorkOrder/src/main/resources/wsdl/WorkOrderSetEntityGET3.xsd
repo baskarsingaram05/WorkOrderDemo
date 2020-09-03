@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="WorkOrderSet">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="1" maxOccurs="unbounded" name="WorkOrder">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" nillable="false" maxOccurs="unbounded" name="order_guid" xmlns=""/>
+                            <xs:element type="xs:string" nillable="false" maxOccurs="unbounded" name="case_id" xmlns=""/>
+                            <xs:element type="xs:string" nillable="false" maxOccurs="unbounded" name="account_name" xmlns=""/>
+                            <xs:element type="xs:string" nillable="false" maxOccurs="unbounded" name="account_id" xmlns=""/>
+                            <xs:element type="xs:string" nillable="false" maxOccurs="unbounded" name="order_id" xmlns=""/>
+                            <xs:element type="xs:string" nillable="false" maxOccurs="unbounded" name="ext_ref" xmlns=""/>
+                            <xs:element type="xs:dateTime" nillable="false" maxOccurs="unbounded" name="ref_date" xmlns=""/>
+                            <xs:element type="xs:string" nillable="false" maxOccurs="unbounded" name="sales_org" xmlns=""/>
+                            <xs:element type="xs:string" nillable="false" maxOccurs="unbounded" name="service_org" xmlns=""/>
+                            <xs:element type="xs:string" nillable="false" maxOccurs="unbounded" name="dis_channel" xmlns=""/>
+                            <xs:element type="xs:string" nillable="false" maxOccurs="unbounded" name="division" xmlns=""/>
+                            <xs:element type="xs:string" nillable="false" maxOccurs="unbounded" name="object_id" xmlns=""/>
+                            <xs:element type="xs:string" nillable="false" maxOccurs="unbounded" name="object_guid" xmlns=""/>
+                            <xs:element type="xs:string" nillable="false" maxOccurs="unbounded" name="user_status" xmlns=""/>
+                            <xs:element type="xs:string" nillable="false" maxOccurs="unbounded" name="add_status" xmlns=""/>
+                            <xs:element type="xs:string" nillable="false" maxOccurs="unbounded" name="loaner_status" xmlns=""/>
+                            <xs:element type="xs:string" nillable="false" maxOccurs="unbounded" name="next_step" xmlns=""/>
+                            <xs:element type="xs:dateTime" nillable="false" maxOccurs="unbounded" name="req_start_date" xmlns=""/>
+                            <xs:element type="xs:dateTime" nillable="false" maxOccurs="unbounded" name="req_end_date" xmlns=""/>
+                            <xs:element type="xs:string" nillable="false" maxOccurs="unbounded" name="contract_no" xmlns=""/>
+                            <xs:element type="xs:string" nillable="false" maxOccurs="unbounded" name="contract_class" xmlns=""/>
+                            <xs:element type="xs:string" nillable="false" maxOccurs="unbounded" name="device_age" xmlns=""/>
+                            <xs:element type="xs:string" nillable="false" maxOccurs="unbounded" name="repair_approval" xmlns=""/>
+                            <xs:element type="xs:string" nillable="false" maxOccurs="unbounded" name="price_limit_currency" xmlns=""/>
+                            <xs:element type="xs:string" nillable="false" maxOccurs="unbounded" name="price_limit" xmlns=""/>
+                            <xs:element type="xs:string" nillable="false" maxOccurs="unbounded" name="order_type_cat" xmlns=""/>
+                            <xs:element type="xs:string" nillable="false" maxOccurs="unbounded" name="ret_def_parts" xmlns=""/>
+                            <xs:element type="xs:string" nillable="false" maxOccurs="unbounded" name="direct_del" xmlns=""/>
+                            <xs:element type="xs:string" nillable="false" maxOccurs="unbounded" name="pickup_srv" xmlns=""/>
+                            <xs:element type="xs:string" nillable="false" maxOccurs="unbounded" name="fault_desc" xmlns=""/>
+                            <xs:element type="xs:string" nillable="false" maxOccurs="unbounded" name="etq_death" xmlns=""/>
+                            <xs:element type="xs:string" nillable="false" maxOccurs="unbounded" name="etq_pot_death" xmlns=""/>
+                            <xs:element type="xs:string" nillable="false" maxOccurs="unbounded" name="etq_qua_issue" xmlns=""/>
+                            <xs:element type="xs:string" nillable="false" maxOccurs="unbounded" name="contact_id" xmlns=""/>
+                            <xs:element type="xs:string" nillable="false" maxOccurs="unbounded" name="user_status_description" xmlns=""/>
+                            <xs:element type="xs:string" nillable="false" maxOccurs="unbounded" name="etq_intake_code" xmlns=""/>
+                            <xs:element type="xs:string" nillable="false" maxOccurs="unbounded" name="etq_final_code" xmlns=""/>
+                            <xs:element type="xs:string" nillable="false" maxOccurs="unbounded" name="ext_ref_obj" xmlns=""/>
+                            <xs:element type="xs:string" nillable="false" maxOccurs="unbounded" name="shipping_address" xmlns=""/>
+                            <xs:element type="xs:string" nillable="false" maxOccurs="unbounded" name="assignment_type" xmlns=""/>
+                            <xs:element type="xs:string" nillable="false" maxOccurs="unbounded" name="product_id" xmlns=""/>
+                            <xs:element type="xs:string" nillable="false" maxOccurs="unbounded" name="product_guid" xmlns=""/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
