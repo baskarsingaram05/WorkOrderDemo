@@ -1,12 +1,13 @@
-#
 #Thu Sep 03 02:35:37 UTC 2020
 SendSFDC_Address=/genericSFDC/send
 SAP_Credentials=SAP_Credentials
 SFDC_SecurityToken=Salesforce_OAXR3_SecurityToken
+
 WorkOrderID=/queryResponse/WorkOrder/Id
 Log02_ACEWorkOrderStatus=true
 Log03_ACEWorkOrderStructure_AM=true
 Log01_WorkOrderOdataResponse=true
+
 SF_Endpoint=https\://olympus-europa--oax.my.salesforce.com/services/Soap/u/46.0
 CRM_WorkOrderFlow=/crmOrderContract/workorder
 Current_Payload=${in.body}

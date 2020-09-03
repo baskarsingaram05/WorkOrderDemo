@@ -1049,7 +1049,9 @@
                 </ifl:property>
                 <ifl:property>
                     <key>queryOptions</key>
+
                     <value>$select=order_guid,case_id,account_name,account_id,order_id,ext_ref,ref_date,sales_org,service_org,dis_channel,division,object_id,object_guid,user_status,add_status,loaner_status,next_step,req_start_date,req_end_date,contract_no,contract_class,device_age,repair_approval,price_limit_currency,price_limit,order_type_cat,ret_def_parts,direct_del,pickup_srv,fault_desc,etq_death,etq_pot_death,etq_qua_issue,contact_id,user_status_description,etq_intake_code,etq_final_code,ext_ref_obj,shipping_address,product_id,product_guid,transaction_type,workshop_id,assignment_type,customer_accessories,internal_note,net_value_rrr,net_value_rrr_currency,mul_inst,etq_event_desc &amp; $filter = order_guid eq guid'${property.orderGuidQuery}'</value>
+
                 </ifl:property>
                 <ifl:property>
                     <key>proxyType</key>
@@ -1224,12 +1226,15 @@
                     <value>ctype::FlowstepVariant/cname::ErrorEventSubProcessTemplate/version::1.0.2</value>
                 </ifl:property>
             </bpmn2:extensionElements>
+
             <bpmn2:startEvent id="StartEvent_9164" name="Error Start 1">
                 <bpmn2:outgoing>SequenceFlow_9166</bpmn2:outgoing>
+
                 <bpmn2:errorEventDefinition>
                     <bpmn2:extensionElements>
                         <ifl:property>
                             <key>cmdVariantUri</key>
+
                             <value>ctype::FlowstepVariant/cname::ErrorStartEvent</value>
                         </ifl:property>
                         <ifl:property>
@@ -1239,6 +1244,7 @@
                     </bpmn2:extensionElements>
                 </bpmn2:errorEventDefinition>
             </bpmn2:startEvent>
+
             <bpmn2:callActivity id="CallActivity_9167" name="CM_AlertContents">
                 <bpmn2:extensionElements>
                     <ifl:property>
@@ -1251,7 +1257,9 @@
                     </ifl:property>
                     <ifl:property>
                         <key>headerTable</key>
+
                         <value>&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;expression&lt;/cell&gt;&lt;cell id='Value'&gt;{{Current_Payload}}&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;Current_Payload&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;expression&lt;/cell&gt;&lt;cell id='Value'&gt;{{Interface_Name}}&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;Interface_Name&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;expression&lt;/cell&gt;&lt;cell id='Value'&gt;{{Execution_Time}}&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;Execution_Time&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;expression&lt;/cell&gt;&lt;cell id='Value'&gt;{{Error_Message}}&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;Error_Message&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;header&lt;/cell&gt;&lt;cell id='Value'&gt;{{MPL_ID}}&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;MPL_ID&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;</value>
+
                     </ifl:property>
                     <ifl:property>
                         <key>wrapContent</key>
@@ -1273,6 +1281,7 @@
                 <bpmn2:incoming>SequenceFlow_9166</bpmn2:incoming>
                 <bpmn2:outgoing>SequenceFlow_9175</bpmn2:outgoing>
             </bpmn2:callActivity>
+
             <bpmn2:serviceTask id="ServiceTask_9172" name="RR_SendAlert">
                 <bpmn2:extensionElements>
                     <ifl:property>
@@ -1291,6 +1300,7 @@
                 <bpmn2:incoming>SequenceFlow_9175</bpmn2:incoming>
                 <bpmn2:outgoing>SequenceFlow_9174</bpmn2:outgoing>
             </bpmn2:serviceTask>
+
             <bpmn2:endEvent id="EndEvent_9173" name="Error End 1">
                 <bpmn2:incoming>SequenceFlow_9174</bpmn2:incoming>
                 <bpmn2:errorEventDefinition>
@@ -1311,6 +1321,7 @@
             <bpmn2:sequenceFlow id="SequenceFlow_9174" sourceRef="ServiceTask_9172" targetRef="EndEvent_9173"/>
         </bpmn2:subProcess>
         <bpmn2:exclusiveGateway default="SequenceFlow_9254" id="ExclusiveGateway_9252" name="Router 1">
+
             <bpmn2:extensionElements>
                 <ifl:property>
                     <key>componentVersion</key>
@@ -1329,11 +1340,13 @@
                     <value>false</value>
                 </ifl:property>
             </bpmn2:extensionElements>
+
             <bpmn2:incoming>SequenceFlow_9253</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_9255</bpmn2:outgoing>
             <bpmn2:outgoing>SequenceFlow_9254</bpmn2:outgoing>
         </bpmn2:exclusiveGateway>
         <bpmn2:exclusiveGateway default="SequenceFlow_9184" id="ExclusiveGateway_9180" name="ACEServiceOrgs">
+
             <bpmn2:extensionElements>
                 <ifl:property>
                     <key>componentVersion</key>
@@ -1352,10 +1365,12 @@
                     <value>false</value>
                 </ifl:property>
             </bpmn2:extensionElements>
+
             <bpmn2:incoming>SequenceFlow_9193</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_9184</bpmn2:outgoing>
             <bpmn2:outgoing>SequenceFlow_9185</bpmn2:outgoing>
         </bpmn2:exclusiveGateway>
+
         <bpmn2:callActivity id="CallActivity_9150" name="CM_SetWorkOrderID">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -1389,6 +1404,7 @@
             </bpmn2:extensionElements>
             <bpmn2:incoming>SequenceFlow_9143</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_9253</bpmn2:outgoing>
+
         </bpmn2:callActivity>
         <bpmn2:callActivity id="CallActivity_13" name="CM_GetOrderGuid">
             <bpmn2:extensionElements>
@@ -1432,7 +1448,9 @@
                 </ifl:property>
                 <ifl:property>
                     <key>propertyTable</key>
+
                     <value>&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;xpath&lt;/cell&gt;&lt;cell id='Value'&gt;{{Contactid}}&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;ContactSFDCID&lt;/cell&gt;&lt;cell id='Datatype'&gt;java.lang.String&lt;/cell&gt;&lt;/row&gt;</value>
+
                 </ifl:property>
                 <ifl:property>
                     <key>headerTable</key>
@@ -1456,7 +1474,9 @@
                 </ifl:property>
             </bpmn2:extensionElements>
             <bpmn2:incoming>SequenceFlow_9201</bpmn2:incoming>
+
             <bpmn2:outgoing>SequenceFlow_9251</bpmn2:outgoing>
+
         </bpmn2:callActivity>
         <bpmn2:callActivity id="CallActivity_183" name="CM_SetWorkOrderID_ContactID">
             <bpmn2:extensionElements>
@@ -1492,6 +1512,7 @@
             <bpmn2:incoming>SequenceFlow_9185</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_184</bpmn2:outgoing>
         </bpmn2:callActivity>
+
         <bpmn2:endEvent id="EndEvent_9183" name="End 2">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -1505,6 +1526,7 @@
             </bpmn2:extensionElements>
             <bpmn2:incoming>SequenceFlow_9184</bpmn2:incoming>
         </bpmn2:endEvent>
+
         <bpmn2:serviceTask id="ServiceTask_40" name="RR_WorkOrderStatus">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -1538,7 +1560,9 @@
                     <value>ctype::FlowstepVariant/cname::ExternalCall/version::1.0.4</value>
                 </ifl:property>
             </bpmn2:extensionElements>
+
             <bpmn2:incoming>SequenceFlow_9255</bpmn2:incoming>
+
             <bpmn2:outgoing>SequenceFlow_9201</bpmn2:outgoing>
         </bpmn2:serviceTask>
         <bpmn2:serviceTask id="ServiceTask_8" name="RR_CRM_ODATA_Details">
@@ -1559,6 +1583,7 @@
             <bpmn2:incoming>SequenceFlow_25</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_9</bpmn2:outgoing>
         </bpmn2:serviceTask>
+
         <bpmn2:endEvent id="EndEvent_2" name="End">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -1573,6 +1598,7 @@
             <bpmn2:incoming>SequenceFlow_9161</bpmn2:incoming>
             <bpmn2:messageEventDefinition/>
         </bpmn2:endEvent>
+
         <bpmn2:callActivity id="CallActivity_17" name="MM_CRM-ODATA_TO_SFDC">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -1604,6 +1630,7 @@
                     <value>ctype::FlowstepVariant/cname::MessageMapping/version::1.0.1</value>
                 </ifl:property>
             </bpmn2:extensionElements>
+
             <bpmn2:incoming>SequenceFlow_9251</bpmn2:incoming>
             <bpmn2:incoming>SequenceFlow_9254</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_18</bpmn2:outgoing>
@@ -1618,6 +1645,7 @@
             <bpmn2:outgoing>SequenceFlow_38</bpmn2:outgoing>
             <bpmn2:messageEventDefinition/>
         </bpmn2:startEvent>
+
         <bpmn2:callActivity id="CallActivity_15" name="GS_Log01_WorkOrderOdataResponse">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -1738,7 +1766,9 @@
             <bpmn2:incoming>SequenceFlow_36</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_25</bpmn2:outgoing>
         </bpmn2:callActivity>
+
         <bpmn2:sequenceFlow id="SequenceFlow_9255" name="With ContactID" sourceRef="ExclusiveGateway_9252" targetRef="ServiceTask_9189">
+
             <bpmn2:extensionElements>
                 <ifl:property>
                     <key>expressionType</key>
@@ -1753,9 +1783,11 @@
                     <value>ctype::FlowstepVariant/cname::GatewayRoute/version::1.0.0</value>
                 </ifl:property>
             </bpmn2:extensionElements>
+
             <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_9255_1597323855764" xsi:type="bpmn2:tFormalExpression">count(//contact_id/text()) &gt; 0</bpmn2:conditionExpression>
         </bpmn2:sequenceFlow>
         <bpmn2:sequenceFlow id="SequenceFlow_9254" name="Without_ContactID" sourceRef="ExclusiveGateway_9252" targetRef="CallActivity_17">
+
             <bpmn2:extensionElements>
                 <ifl:property>
                     <key>expressionType</key>
@@ -1770,8 +1802,10 @@
                     <value>ctype::FlowstepVariant/cname::GatewayRoute/version::1.0.0</value>
                 </ifl:property>
             </bpmn2:extensionElements>
+
         </bpmn2:sequenceFlow>
         <bpmn2:sequenceFlow id="SequenceFlow_9184" name="Non-valid ACEServiceOrgs" sourceRef="ExclusiveGateway_9180" targetRef="EndEvent_9183">
+
             <bpmn2:extensionElements>
                 <ifl:property>
                     <key>expressionType</key>
@@ -1787,7 +1821,9 @@
                 </ifl:property>
             </bpmn2:extensionElements>
         </bpmn2:sequenceFlow>
+
         <bpmn2:sequenceFlow id="SequenceFlow_9185" name="Valid ACEServiceOrgs" sourceRef="ExclusiveGateway_9180" targetRef="CallActivity_183">
+
             <bpmn2:extensionElements>
                 <ifl:property>
                     <key>expressionType</key>
@@ -1802,17 +1838,21 @@
                     <value>ctype::FlowstepVariant/cname::GatewayRoute/version::1.0.0</value>
                 </ifl:property>
             </bpmn2:extensionElements>
+
             <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_9185_1597323855766" xsi:type="bpmn2:tFormalExpression">//service_org = 'O 50001042' or //service_org = 'O 50001338' or //service_org = 'O 50001335'</bpmn2:conditionExpression>
         </bpmn2:sequenceFlow>
         <bpmn2:sequenceFlow id="SequenceFlow_9253" sourceRef="CallActivity_9150" targetRef="ExclusiveGateway_9252"/>
         <bpmn2:sequenceFlow id="SequenceFlow_36" sourceRef="CallActivity_13" targetRef="CallActivity_24"/>
         <bpmn2:sequenceFlow id="SequenceFlow_9251" sourceRef="CallActivity_9186" targetRef="CallActivity_17"/>
         <bpmn2:sequenceFlow id="SequenceFlow_184" sourceRef="CallActivity_183" targetRef="ServiceTask_40"/>
+
         <bpmn2:sequenceFlow id="SequenceFlow_9155" sourceRef="ServiceTask_40" targetRef="CallActivity_9136"/>
         <bpmn2:sequenceFlow id="SequenceFlow_9201" sourceRef="ServiceTask_9189" targetRef="CallActivity_9186"/>
         <bpmn2:sequenceFlow id="SequenceFlow_9" sourceRef="ServiceTask_8" targetRef="CallActivity_15"/>
         <bpmn2:sequenceFlow id="SequenceFlow_18" sourceRef="CallActivity_17" targetRef="CallActivity_22"/>
+
         <bpmn2:sequenceFlow id="SequenceFlow_38" sourceRef="StartEvent_37" targetRef="CallActivity_13"/>
+
         <bpmn2:sequenceFlow id="SequenceFlow_9193" sourceRef="CallActivity_15" targetRef="ExclusiveGateway_9180"/>
         <bpmn2:sequenceFlow id="SequenceFlow_9143" sourceRef="CallActivity_9136" targetRef="CallActivity_9150"/>
         <bpmn2:sequenceFlow id="SequenceFlow_9161" sourceRef="CallActivity_22" targetRef="EndEvent_2"/>
@@ -1821,6 +1861,7 @@
     <bpmndi:BPMNDiagram id="BPMNDiagram_1" name="Default Collaboration Diagram">
         <bpmndi:BPMNPlane bpmnElement="Collaboration_1" id="BPMNPlane_1">
             <bpmndi:BPMNShape bpmnElement="CallActivity_13" id="BPMNShape_CallActivity_13">
+
                 <dc:Bounds height="60.0" width="100.0" x="25.0" y="114.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="StartEvent_37" id="BPMNShape_StartEvent_37">
@@ -1852,11 +1893,13 @@
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="EndEvent_9173" id="BPMNShape_EndEvent_9173">
                 <dc:Bounds height="32.0" width="32.0" x="1647.0" y="495.0"/>
+
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="Participant_11" id="BPMNShape_Participant_11">
                 <dc:Bounds height="140.0" width="100.0" x="247.0" y="-238.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="CallActivity_22" id="BPMNShape_CallActivity_22">
+
                 <dc:Bounds height="60.0" width="100.0" x="1568.0" y="112.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="Participant_9170" id="BPMNShape_Participant_9170">
